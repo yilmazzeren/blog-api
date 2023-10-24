@@ -33,6 +33,7 @@ public class PostHandlerImpl implements PostHandler {
 
     @Override
     public SuccessDataResult<List<Post>> getPosts() {
+        /*postRepository.getAllByCategoryIds("1", "2");*/
         return new SuccessDataResult<>(postRepository.findAll());
     }
 

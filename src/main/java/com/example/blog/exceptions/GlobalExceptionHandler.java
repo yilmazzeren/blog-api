@@ -18,4 +18,11 @@ public class GlobalExceptionHandler {
         String error = String.format("%s", exception.getField());
         return ResponseEntity.badRequest().body(new ErrorResult(error));
     }
+
+    @ExceptionHandler(PostFoundWithCategoryException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<ErrorResult> handlePostFoundWithCategoryException(PostFoundWithCategoryException exception) {
+        String error = String.format("%s", exception.getMessage());
+        return ResponseEntity.badRequest().body(new ErrorResult(error));
+    }
 }
