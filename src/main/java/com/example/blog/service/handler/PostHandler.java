@@ -23,4 +23,6 @@ public interface PostHandler {
 
     SuccessDataResult<Post> changeCategory(String postId, String categoryId);
 
+    SuccessDataResult<List<Post>> getPostsByCategoryId(String categoryId);
+
 }

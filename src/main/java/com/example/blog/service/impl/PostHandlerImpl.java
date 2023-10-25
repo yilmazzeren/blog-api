@@ -96,4 +96,11 @@ public class PostHandlerImpl implements PostHandler {
         return new SuccessDataResult<>(postRepository.save(post));
 
     }
+
+    @Override
+    public SuccessDataResult<List<Post>> getPostsByCategoryId(String categoryId) {
+        if (!categoryRepository.existsById(categoryId))
+            throw new DocumentNotFoundException("Category with id " + categoryId + " was not found");
+        return new SuccessDataResult<>(postRepository.getPostByCategory_Id(categoryId));
+    }
 }

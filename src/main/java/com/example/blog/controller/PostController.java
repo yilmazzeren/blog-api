@@ -52,14 +52,21 @@ public class PostController {
         return postHandler.updatePost(updatePostRequest);
     }
 
-    @Operation(summary = "Get posts")
+    @Operation(summary = "Get last 5 posts")
     @GetMapping("/lastPosts")
     public SuccessDataResult<List<Post>> lastPosts(PostSortMethod sortBy) {
         return postHandler.lastPosts(sortBy);
     }
 
+    @Operation(summary = "Change post category", description = "asd")
     @PatchMapping("/changeCategory")
     public SuccessDataResult<Post> changeCategory(@RequestParam String postId, @RequestParam String categoryId) {
         return postHandler.changeCategory(postId, categoryId);
+    }
+
+    @Operation(summary = "Get posts by category id", description = "asd")
+    @GetMapping("/byCategoryId")
+    public SuccessDataResult<List<Post>> getPostsByCategoryId(@RequestParam String categoryId) {
+        return postHandler.getPostsByCategoryId(categoryId);
     }
 }
