@@ -8,7 +8,9 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -23,6 +25,9 @@ public class Post {
 
     @DBRef
     private Category category;
+
+    @DBRef
+    private List<Comment> comments = new ArrayList<>();
 
     @CreatedDate
     private Date createdAt;
