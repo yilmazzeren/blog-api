@@ -1,5 +1,6 @@
 package com.example.blog.controller;
 
+import com.example.blog.config.ControllerConfig;
 import com.example.blog.model.Category;
 import com.example.blog.model.request.AddCategoryRequest;
 import com.example.blog.model.request.UpdateCategoryRequest;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@ControllerConfig
 @Slf4j
 @RequestMapping(value = "/api/category")
 @RequiredArgsConstructor

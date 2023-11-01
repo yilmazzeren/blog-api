@@ -19,4 +19,6 @@ public class Comment {
 
     @LastModifiedDate
     private Date updatedAt;
+
+    private User user;
 }

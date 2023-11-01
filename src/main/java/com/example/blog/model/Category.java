@@ -19,4 +19,6 @@ public class Category {
 
     @LastModifiedDate
     private Date updatedAt;
+
+    private User user;
 }

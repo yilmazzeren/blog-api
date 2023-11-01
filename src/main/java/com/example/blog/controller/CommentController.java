@@ -1,5 +1,6 @@
 package com.example.blog.controller;
 
+import com.example.blog.config.ControllerConfig;
 import com.example.blog.model.Post;
 import com.example.blog.model.request.AddCommentRequest;
 import com.example.blog.service.handler.CommentHandler;
@@ -11,9 +12,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@ControllerConfig
 @Slf4j
 @RequestMapping(value = "/api/comment")
 @RequiredArgsConstructor

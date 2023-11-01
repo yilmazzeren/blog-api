@@ -1,5 +1,6 @@
 package com.example.blog.model.request;
 
+import com.example.blog.model.User;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
@@ -12,4 +13,5 @@ public class AddPostRequest {
     @Id
     private String categoryId;
 
+    private User user;
 }

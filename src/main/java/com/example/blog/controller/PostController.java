@@ -1,5 +1,6 @@
 package com.example.blog.controller;
 
+import com.example.blog.config.ControllerConfig;
 import com.example.blog.model.Post;
 import com.example.blog.model.enums.PostSortMethod;
 import com.example.blog.model.request.AddPostRequest;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@ControllerConfig
 @Slf4j
 @RequestMapping(value = "/api/post")
 @RequiredArgsConstructor
